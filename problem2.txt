@@ -1,0 +1,51 @@
+DESCRIPTION
+===========
+Implement a function named print_tree_level which prints the elements of
+a binary tree which are at depth n, where the root is at depth 0. Print
+the elements in left-to-right order.
+--------------------------------------------
+Data structure definition in C++:
+
+  struct Node {
+    Node *left_child; // or NULL if none
+    Node *right_child; // or NULL if none
+    int data; // the data to print
+  };
+
+Function prototype in C++:
+
+  void print_tree_level(Node *root, int depth);
+--------------------------------------------
+Data structure definition in C#:
+
+  class Node {
+    public Node left_child; // or null if none
+    public Node right_child; // or null if none
+    public int data; // the data to print
+  };
+
+Function prototype in C#:
+
+  static void print_tree_level(Node root, int depth);
+--------------------------------------------
+Example code fragment:
+
+  // Suppose the tree looks like this:
+  //
+  //        4   <- root
+  //       / \
+  //      9   2
+  //     / \   \
+  //    3   5   8
+  //     \     / \
+  //      7   6   1
+  //
+  // Then:
+  print_tree_level(root, 2);
+  // will print: 3 5 8
+
+
+Please implement the above-specified function in C++ or C#. If you are not
+familiar with C++ and C#, implement the data structure and function in a language with which you are comfortable.
+
+Describe any nonstandard assumptions you make.

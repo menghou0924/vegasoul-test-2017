@@ -1,0 +1,41 @@
+DESCRIPTION
+===========
+Implement a function named unpack which takes two pointers to char buffers,
+named src and dest. When the function is called, dest has been initialized
+with zeros, and src contains one or more consecutive "commands", each
+consisting of:
+
+ * One (1) byte: a command "header", of which
+   - the most significant 4 bits form an unsigned "length" value, call it n
+   - the least significant 4 bits form an unsigned "offset" value, call it i
+ * n bytes of "data"
+
+The effect of unpack is to execute each command, storing the n bytes of data
+into dest, starting at byte index i of dest. The commands should be executed
+in the order in which they occur in src. A command with length zero (and any
+offset) indicates the end of the command list. You may assume that dest is
+large enough to hold the result. You may use standard C or C# library functions.
+--------------------------------------------
+Function prototype in C:
+
+  void unpack(const char *src, char *dest);
+
+Example code fragment in C:
+
+  char src[7] = { 0x32, 6, 7, 8, 0x13, 9, 0x00 };
+  // n = 3, i = 2; n = 1, i = 3; end
+  char dest[8]; memset(dest, 0, 8);
+  unpack(src, dest);
+  // Now dest = { 0, 0, 6, 9, 8, 0, 0, 0 }
+--------------------------------------------
+Function prototype in C#:
+
+ static void unpack(byte[] src, byte[] dest);
+
+Example code fragment in C#:
+
+  byte[] src = { 0x32, 6, 7, 8, 0x13, 9, 0x00 };
+  // n = 3, i = 2; n = 1, i = 3; end
+  byte[] dest = new byte[8];
+  unpack(src, dest);
+  // Now dest = { 0, 0, 6, 9, 8, 0, 0, 0 }

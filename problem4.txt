@@ -1,0 +1,12 @@
+DESCRIPTION
+===========
+Implement an algorithm to select m lines from a large file such that each
+line in the file shall have an equal probability of being selected.
+
+The large file may only be accessed using 3 APIs, namely:
+- hasNext() which returns a boolean indicating if there is a next line;
+- getLine() which returns the next line from the file;
+- reset() which resets the file pointer to the start of the file.
+
+Your solution should aim for correctness and efficiency.
+You may indicate any reasonable assumptions that you made.
