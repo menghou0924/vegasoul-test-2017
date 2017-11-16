@@ -1,5 +1,7 @@
 # vegasoul-test-2017
+
 Programming test for recruitment at Vegasoul
+
 Date: 10/15/2017
 
 Original job post:
